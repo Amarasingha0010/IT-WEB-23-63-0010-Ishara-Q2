@@ -1,0 +1,39 @@
+﻿@page
+@model StudentInformation.Pages.Student.CreateModel
+
+<h1>Create Student_Info</h1>
+
+<h4>Student_Info</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Student_Info.Name" class="control-label"></label>
+                <input asp-for="Student_Info.Name" class="form-control" />
+                <span asp-validation-for="Student_Info.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student_Info.City" class="control-label"></label>
+                <input asp-for="Student_Info.City" class="form-control" />
+                <span asp-validation-for="Student_Info.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student_Info.CourseID" class="control-label"></label>
+                <input asp-for="Student_Info.CourseID" class="form-control" />
+                <span asp-validation-for="Student_Info.CourseID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

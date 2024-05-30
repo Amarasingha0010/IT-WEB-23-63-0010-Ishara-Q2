@@ -1,0 +1,29 @@
+﻿@page
+@model StudentInformation.Pages.StudentInfoModel
+@{
+    ViewData["Title"] = "Student Information";
+}
+
+<h1>Student Information</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Course Name</th>
+            <th>Lecturer Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model.Students)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.City</td>
+                <td>@student.Course.CourseName</td>
+                <td>@student.Course.LecturerName</td>
+            </tr>
+        }
+    </tbody>
+</table>
